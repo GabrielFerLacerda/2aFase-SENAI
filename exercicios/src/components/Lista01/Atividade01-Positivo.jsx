@@ -11,6 +11,7 @@ function Atividade01() {
 
         if(numero > 0){
             setResultado("Positivo")
+            
         }else if(numero < 0){
             setResultado("Negativo")
         }else {
