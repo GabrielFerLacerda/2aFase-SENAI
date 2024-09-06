@@ -10,21 +10,22 @@ function Atividade01() {
         let numero = Number(prompt("Digite um numero para verificação: "))
 
         if(numero > 0){
-            alert("O numero é positivo")
+            setResultado("Positivo")
         }else if(numero < 0){
-            alert("O numero é negativo")
+            setResultado("Negativo")
         }else {
-            alert("O numero é nulo")
+            setResultado("Nulo")
         }
     }
 
     return (
-        <center>
-        <div className="Media-container">
+        
+        <div className="Positivo-container">
             <h2>Verificação se é um número positivo, negativo ou nulo</h2>
             <button onClick={numero}>Verificar</button>
+            <p>Sinal:{resultado}</p>
         </div>
-        </center>
+        
     )
 }
 

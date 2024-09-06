@@ -1,16 +1,18 @@
 import './App.css'
-import Atividade01 from './components/Lista01/Atividade01'
-import Atividade02 from './components/Lista01/Atividade02'
+import Atividade01 from './components/Lista01/Atividade01-Positivo'
+import Atividade02 from './components/Lista01/Atividade02-ParPositivo'
+import Atividade03 from './components/Lista01/Atividade03'
 
 
 function App() {
  
 
   return (
-    <>
-    {/* <Atividade01 /> */}
-    <Atividade02/>
-    </>
+    <div className='App-container'>
+      <Atividade01 />
+      <Atividade02/>
+      <Atividade03/>
+    </div>
   )
 }
 
