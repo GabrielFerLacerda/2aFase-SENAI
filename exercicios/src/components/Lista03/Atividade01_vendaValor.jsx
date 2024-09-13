@@ -8,11 +8,31 @@
 
 
 import React from 'react'
+const [resultado, setResultado] = useState('')
 
 function Atividade01_vendaValor() {
+
+  let valoVendaTrinta
+  let valorVendaQuarenta
+  let produto
+
+    function vendas() {
+      
+      produto = Number(prompt("Digite o valor do produto."))
+      
+    }
+
+    
+    
+
+    
+
+
   return (
     <div>
-      <h2></h2>
+      <h2>Comercio</h2>
+      <button onClick={vendas}>Fazer comparação para venda.</button>
+
     </div>
   )
 }
