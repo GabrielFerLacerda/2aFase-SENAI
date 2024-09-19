@@ -1,40 +1,29 @@
-// Um comerciante comprou um produto e quer vendê-lo com lucro de 
-// 45% se o valor da compra for menor que R$20,00; caso contrário, o lucro 
-// será de 30%. Faça um programa que entre com o valor do produto e mostre 
-// o valor de venda.
-
-
-
-
-
-import React from 'react'
-const [resultado, setResultado] = useState('')
+import React, { useState } from 'react';
+import './Container.css'; // Certifique-se de importar o CSS
 
 function Atividade01_vendaValor() {
+  const [resultado, setResultado] = useState('');
 
-  let valoVendaTrinta
-  let valorVendaQuarenta
-  let produto
+  function vendas() {
+    const produto = Number(prompt("Digite o valor do produto."));
 
-    function vendas() {
-      
-      produto = Number(prompt("Digite o valor do produto."))
-      
+    let valorVenda;
+    if (produto < 20.00) {
+      valorVenda = produto * 1.45; // 45% de lucro
+    } else {
+      valorVenda = produto * 1.30; // 30% de lucro
     }
 
-    
-    
-
-    
-
+    setResultado(`O valor de venda deve ser: R$${valorVenda.toFixed(2)}`);
+  }
 
   return (
-    <div>
-      <h2>Comercio</h2>
-      <button onClick={vendas}>Fazer comparação para venda.</button>
-
+    <div className='notaValor'>
+      <h3>Calculadora de Venda</h3>
+      <button onClick={vendas}>Calcular valor</button>
+      <p>Resultado: {resultado}</p>
     </div>
-  )
+  );
 }
 
-export default Atividade01_vendaValor
+export default Atividade01_vendaValor;

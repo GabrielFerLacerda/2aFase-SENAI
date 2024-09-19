@@ -1,0 +1,35 @@
+.notaValor, .notasEscola, .porquinhoCofre {
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 300px; /* Definindo uma largura fixa */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9; /* Fundo claro */
+}
+
+h3 {
+    margin-bottom: 15px; /* Espaçamento entre o título e o botão */
+}
+
+button {
+    padding: 10px 15px; /* Padding do botão */
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3; /* Cor ao passar o mouse */
+}
+
+p {
+    margin-top: 15px; /* Espaçamento entre o botão e o resultado */
+    font-weight: bold; /* Destaque para o resultado */
+}
