@@ -15,9 +15,48 @@ body, html{
     font-size: 36;
   }
   
-   .sub-titulo{
+   .sub-titulo {
     margin-top: 30px ; 
     font-size: 24;
     color: rgba(0, 0, 0, 0.719); 
     font-weight: 600; 
+    display: flex;
    }
+
+   .ver-mais{
+    height: fit-content;
+    margin-left: 60%;
+    margin-top: 10px;
+    color: #00C677;
+   }
+
+   .cardMercado{
+    
+      background-color: #D9D9D9;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-left:  155px;
+      margin-right: 10px;
+      width: 360px; 
+      height: 125px; 
+      z-index: 1;
+      border-radius: 10px;
+      margin-top: 5px;
+  }
+
+  .imagemCard{
+    background-color: #A7A7A7;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-left:  15px;
+      width: 105px; 
+      height: 105px; 
+      z-index: 1;
+      border-radius: 10px;
+      
+  }
+  
+
+   
