@@ -1,0 +1,62 @@
+/* Garante que a navbar fique no topo da página */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #eaeaea;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-brand h1 {
+    color: #FF1493;
+    font-size: 24px;
+    margin-left: 10px;
+  }
+  
+  .logo {
+    width: 70px;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    margin-right: 33%;
+    position: relative;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 35px; 
+    letter-spacing: 1px; 
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #FF1493;
+  }
+  
+  .nav-links a.active {
+    color: #FF1493;
+    border-bottom: 2px solid #FF1493;
+    padding-bottom: 5px;
+  }
+  
+  body {
+    padding-top: 70px;
+  }
+  

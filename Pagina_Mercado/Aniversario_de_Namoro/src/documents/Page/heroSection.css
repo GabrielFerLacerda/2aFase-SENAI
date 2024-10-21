@@ -1,0 +1,59 @@
+.hero-container {
+  width: 110%;
+  height: 100vh;
+  background-image: url('../componets/image/Imagem-de-fundo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  color: rgb(3, 3, 3);
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-text {
+  max-width: 40%; /* Limita a largura do texto */
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+.hero-image {
+  max-width: 45%; /* Limita o tamanho da imagem */
+  margin-left: 20px; /* Adiciona um espaço entre o texto e a imagem */
+}
+
+.hero-image img {
+  width: 110%; /* A imagem ocupará toda a largura disponível */
+  height: 90vh; /* Mantém a proporção da imagem */
+  
+}
+
+.hero-text p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.hero-button {
+  background-color: #FF1493;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.hero-button:hover {
+  background-color: #ff66b2;
+}
