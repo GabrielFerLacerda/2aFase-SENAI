@@ -1,62 +1,111 @@
-body, html{
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-  }
+body, html {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
 
-  #container_home{
-    height: 100%;
-    width: 100%;
-  }
+#container_home {
+  height: 100%;
+  width: 100%;
+}
 
-  .TituloHome{
-    margin-top: 60px;
-    margin-left: 154px;
-    font-size: 36;
-  }
-  
-   .sub-titulo {
-    margin-top: 30px ; 
-    font-size: 24;
-    color: rgba(0, 0, 0, 0.719); 
-    font-weight: 600; 
-    display: flex;
-   }
+.TituloHome {
+  margin-top: 60px;
+  margin-left: 30px;
+  font-size: 36px; 
+}
 
-   .ver-mais{
-    height: fit-content;
-    margin-left: 60%;
-    margin-top: 10px;
-    color: #00C677;
-   }
+.sub-titulo {
+  margin-top: 30px; 
+  font-size: 20px; 
+  color: rgba(0, 0, 0, 0.719); 
+  font-weight: 600; 
+  display: flex;
+}
 
-   .cardMercado{
-    
-      background-color: #D9D9D9;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-left:  155px;
-      margin-right: 10px;
-      width: 360px; 
-      height: 125px; 
-      z-index: 1;
-      border-radius: 10px;
-      margin-top: 5px;
-  }
+.cardMercado {
+  background-color: #D9D9D9;
+  display: inline-flex;
+  align-items: center; 
+  margin-left: 30px;
+  margin-right: 5px;
+  width: 360px; 
+  height: 125px; 
+  z-index: 1;
+  border-radius: 10px;
+  margin-top: 5px;
+  border: 1px solid red;
+  transition: transform 0.3s, box-shadow 0.3s; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
 
-  .imagemCard{
-    background-color: #A7A7A7;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-left:  15px;
-      width: 105px; 
-      height: 105px; 
-      z-index: 1;
-      border-radius: 10px;
-      
-  }
-  
+.teste{
+  display: flex;
+}
 
-   
+.cardMercado:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+}
+
+.imagemCard {
+  background-color: #A7A7A7; 
+  display: flex;
+  width: 105px; 
+  height: 105px; 
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-left: 2%;
+}
+
+.imagemCard img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  border-radius: 10px; 
+}
+
+.imagemCard:hover {
+  background-color: #B0B0B0; 
+}
+
+.info-mercado {
+  display: block;
+  margin-left: 2%;
+  text-align: left; 
+  border: 1px solid red;
+  width: fit-content; 
+}
+
+.nome-mercado {
+  font-size: 16px; 
+}
+
+.detalhes-mercado {
+  font-size: 12px; 
+  color: rgba(0, 0, 0, 0.6); 
+}
+
+/*-------------------------------------------------------------- CAROUSEL----------------------------------------------------------- */
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 20px;  
+  height: 20px; 
+}
+
+.btn-custom {
+  background-color: #A9A9A9; 
+  color: white; 
+  border: none; 
+  border-radius: 50%; 
+  width: 50px; 
+  height: 50px;
+  cursor: pointer; 
+  transition: background-color 0.3s;
+  margin-top: 40px;
+}
+
+.btn-custom:hover {
+  background-color: #888888; 
+}
