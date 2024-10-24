@@ -23,10 +23,20 @@ body, html {
   display: flex;
 }
 
+.sub-titulo2{
+  margin-top: 30px; 
+  font-size: 20px; 
+  color: rgba(0, 0, 0, 0.719); 
+  font-weight: 600; 
+  display: flex;
+  margin-left: 32px;
+}
+
 .cardMercado {
-  background-color: #D9D9D9;
-  display: inline-flex;
+  background-color: #ffffff;
+  display:flex;
   align-items: center; 
+  justify-content: center;
   margin-left: 30px;
   margin-right: 5px;
   width: 360px; 
@@ -34,28 +44,29 @@ body, html {
   z-index: 1;
   border-radius: 10px;
   margin-top: 5px;
-  border: 1px solid red;
-  transition: transform 0.3s, box-shadow 0.3s; 
+  transition: transform 0.3s; 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  
 }
 
-.teste{
+.cardContent{
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4%;
+  width: 100%;
 }
 
 .cardMercado:hover {
   transform: translateY(-5px); 
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+  cursor: pointer;
 }
 
 .imagemCard {
-  background-color: #A7A7A7; 
   display: flex;
-  width: 105px; 
-  height: 105px; 
+  width: 30%;
   border-radius: 10px;
-  margin-top: 10px;
-  margin-left: 2%;
 }
 
 .imagemCard img {
@@ -65,16 +76,15 @@ body, html {
   border-radius: 10px; 
 }
 
-.imagemCard:hover {
-  background-color: #B0B0B0; 
-}
-
 .info-mercado {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  
+  justify-content: center;
   margin-left: 2%;
   text-align: left; 
-  border: 1px solid red;
-  width: fit-content; 
+  width: 60%; 
+  height: 90px;
 }
 
 .nome-mercado {
@@ -82,8 +92,11 @@ body, html {
 }
 
 .detalhes-mercado {
-  font-size: 12px; 
+  font-size: 13px; 
+  font-weight: 500;
   color: rgba(0, 0, 0, 0.6); 
+  width: 140px;
+  height: 60px;
 }
 
 /*-------------------------------------------------------------- CAROUSEL----------------------------------------------------------- */
@@ -95,7 +108,7 @@ body, html {
 }
 
 .btn-custom {
-  background-color: #A9A9A9; 
+  background-color: #a9a9a957; 
   color: white; 
   border: none; 
   border-radius: 50%; 
@@ -104,8 +117,23 @@ body, html {
   cursor: pointer; 
   transition: background-color 0.3s;
   margin-top: 40px;
-}
+  margin-left: 23px;
+} */
 
 .btn-custom:hover {
-  background-color: #888888; 
+  background-color: #888888c0; 
 }
+
+.col-md-4{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+}
+
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

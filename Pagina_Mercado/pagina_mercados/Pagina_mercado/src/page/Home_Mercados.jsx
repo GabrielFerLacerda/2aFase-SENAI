@@ -1,7 +1,24 @@
 import React from 'react';
 import './home_mercado.css';
 
+const mercadosVisitados = [
+  { nome: 'Big by Carrefour', distancia: '5.6 km', tempo: '146-156 min', img: 'image1.png' },
+  { nome: 'Nome do Mercado 2', distancia: '3.2 km', tempo: '120-130 min', img: 'image2.avif' },
+  { nome: 'Nome do Mercado 3', distancia: '4.0 km', tempo: '130-140 min', img: 'image3.avif' },
+  { nome: 'Nome do Mercado 4', distancia: '6.1 km', tempo: '150-160 min', img: 'image4.jpg' },
+  { nome: 'Nome do Mercado 5', distancia: '2.0 km', tempo: '140-150 min', img: 'image5.avif' },
+  { nome: 'Nome do Mercado 6', distancia: '4.5 km', tempo: '160-170 min', img: 'image6.avif' },
+];
+
 function HomeMercados() {
+  const slidesVisitados = [];
+  const slidesPerto = [];
+
+  for (let i = 0; i < mercadosVisitados.length; i += 3) {
+    slidesVisitados.push(mercadosVisitados.slice(i, i + 3));
+    slidesPerto.push(mercadosVisitados.slice(i, i + 3)); // Aqui você pode alterar os dados se quiser diferentes
+  }
+
   return (
     <div id="container_home" className="container mt-5">
       <div className="TituloHome text-start">
@@ -11,105 +28,116 @@ function HomeMercados() {
         </div>
       </div>
 
-      {/* Carousel de cards */}
-      <div id="carouselExampleControls" className="carousel slide" data-bs-ride="false" data-bs-wrap="false">
+      {/* Carousel de mercados visitados */}
+      <div id="carouselVisitados" className="carousel slide" data-bs-ride="false" data-bs-wrap="false">
         <div className="carousel-inner">
-
-          {/* Slide 1 */}
-          <div className="carousel-item active">
-            <div className="row">
-              <div className="col-md-4">
-                <div className="card cardMercado">
-                  <div className='teste'>
-                    <div className="imagemCard">
-                      <img src="https://img.freepik.com/vector-premium/logotipo-supermercado_23-2148476401.jpg" alt="Mercado 1" />
+          {slidesVisitados.map((slide, index) => (
+            <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
+              <div className="row">
+                {slide.map((mercado, idx) => (
+                  <div className="col-md-4" key={idx}>
+                    <div className="cardMercado">
+                      <div className='cardContent'>
+                        <div className="imagemCard">
+                          <img src={mercado.img} alt={`Mercado ${idx + 1}`} />
+                        </div>
+                        <div className="info-mercado">
+                          <p className="nome-mercado">{mercado.nome}</p>
+                          <p className="detalhes-mercado">{mercado.distancia} • {mercado.tempo}</p>
+                        </div>
+                      </div>
                     </div>
-                    <div className="info-mercado">
-                      <p className="nome-mercado">Big by Carrefour</p>
-                      <p className="detalhes-mercado">5.6 km • 146-156 min</p>
-                    </div>
                   </div>
-                  </div>
-              </div>
-
-              <div className="col-md-4">
-                <div className="card cardMercado">
-                  <div className="imagemCard">
-                    <img src="https://img.freepik.com/vetores-premium/desenho-de-logotipo-bonito-e-unico-para-empresa-de-comercio-eletronico-e-varejo_1287271-11601.jpg" alt="Mercado 2" />
-                  </div>
-                  <div className="info-mercado">
-                    <p className="nome-mercado">Nome do Mercado 2</p>
-                    <p className="detalhes-mercado">3.2 km • 120-130 min</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-4">
-                <div className="card cardMercado">
-                  <div className="imagemCard">
-                    <img src="https://img.freepik.com/vetores-premium/modelo-de-logotipo-de-supermercado-com-carrinho-de-compras_852937-3737.jpg" alt="Mercado 3" />
-                  </div>
-                  <div className="info-mercado">
-                    <p className="nome-mercado">Nome do Mercado 3</p>
-                    <p className="detalhes-mercado">4.0 km • 130-140 min</p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
-          </div>
-
-          {/* Slide 2 */}
-          <div className="carousel-item">
-            <div className="row">
-              <div className="col-md-4">
-                <div className="card cardMercado">
-                  <div className="imagemCard">
-                    <img src="https://t.ctcdn.com.br/QRPQ8RohuOwrxtsFfLaBI5tq2QE=/1200x675/smart/i579310.png" alt="Mercado Livre" />
-                  </div>
-                  <div className="info-mercado">
-                    <p className="nome-mercado">Nome do Mercado 4</p>
-                    <p className="detalhes-mercado">6.1 km • 150-160 min</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-4">
-                <div className="card cardMercado">
-                  <div className="imagemCard">
-                    <img src="https://img.freepik.com/vetores-gratis/modelo-de-logotipo-de-supermercado-de-carrinho-compras_23-2148470295.jpg?semt=ais_hybrid" alt="Mercado 5" />
-                  </div>
-                  <div className="info-mercado">
-                    <p className="nome-mercado">Nome do Mercado 5</p>
-                    <p className="detalhes-mercado">2.0 km • 140-150 min</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-4">
-                <div className="card cardMercado">
-                  <div className="imagemCard">
-                    <img src="https://img.freepik.com/vetores-premium/logotipo-do-supermercado_23-2148476403.jpg" alt="Mercado 6" />
-                  </div>
-                  <div className="info-mercado">
-                    <p className="nome-mercado">Nome do Mercado 6</p>
-                    <p className="detalhes-mercado">4.5 km • 160-170 min</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
+          ))}
         </div>
 
         {/* Botões de navegação */}
-        <button className="btn-custom carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <button className="btn-custom carousel-control-prev" type="button" data-bs-target="#carouselVisitados" data-bs-slide="prev">
           <span className="carousel-control-prev-icon" aria-hidden="true"></span>
         </button>
-        <button className="btn-custom carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <button className="btn-custom carousel-control-next" type="button" data-bs-target="#carouselVisitados" data-bs-slide="next">
           <span className="carousel-control-next-icon" aria-hidden="true"></span>
         </button>
-
       </div>
+
+      <div className='sub-titulo2'>
+        <p>Perto de você</p>
+      </div>
+
+      {/* Carousel de mercados perto de você */}
+      <div id="carouselPerto" className="carousel slide" data-bs-ride="false" data-bs-wrap="false">
+        <div className="carousel-inner">
+          {slidesPerto.map((slide, index) => (
+            <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
+              <div className="row">
+                {slide.map((mercado, idx) => (
+                  <div className="col-md-4" key={idx}>
+                    <div className="cardMercado">
+                      <div className='cardContent'>
+                        <div className="imagemCard">
+                          <img src={mercado.img} alt={`Mercado ${idx + 1}`} />
+                        </div>
+                        <div className="info-mercado">
+                          <p className="nome-mercado">{mercado.nome}</p>
+                          <p className="detalhes-mercado">{mercado.distancia} • {mercado.tempo}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Botões de navegação */}
+        <button className="btn-custom carousel-control-prev" type="button" data-bs-target="#carouselPerto" data-bs-slide="prev">
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button className="btn-custom carousel-control-next" type="button" data-bs-target="#carouselPerto" data-bs-slide="next">
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <div id="carouselPerto2" className="carousel slide" data-bs-ride="false" data-bs-wrap="false">
+        <div className="carousel-inner">
+          {slidesPerto.map((slide, index) => (
+            <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
+              <div className="row">
+                {slide.map((mercado, idx) => (
+                  <div className="col-md-4" key={idx}>
+                    <div className="cardMercado">
+                      <div className='cardContent'>
+                        <div className="imagemCard">
+                          <img src={mercado.img} alt={`Mercado ${idx + 1}`} />
+                        </div>
+                        <div className="info-mercado">
+                          <p className="nome-mercado">{mercado.nome}</p>
+                          <p className="detalhes-mercado">{mercado.distancia} • {mercado.tempo}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Botões de navegação */}
+        <button className="btn-custom carousel-control-prev" type="button" data-bs-target="#carouselPerto2" data-bs-slide="prev">
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button className="btn-custom carousel-control-next" type="button" data-bs-target="#carouselPerto2" data-bs-slide="next">
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+
+
+
     </div>
   );
 }
